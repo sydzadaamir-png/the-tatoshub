@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The xxl</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-tatoshub.vercel.app/">
+<meta property="og:site_name" content="The xxl">
+<meta property="og:title" content="The xxl">
+<meta property="og:description" content="Watch Now - 20 videos. Tap to watch.">
+<meta property="og:image" content="https://the-tatoshub.vercel.app/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The xxl - Watch Now">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The xxl">
+<meta name="twitter:description" content="Watch Now - 20 videos. Tap to watch.">
+<meta name="twitter:image" content="https://the-tatoshub.vercel.app/preview.jpg">
+<link rel="preconnect" href="https://t.co">
+<link rel="dns-prefetch" href="https://t.co">
+<link rel="preload" href="card1.jpg" as="image" fetchpriority="high">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HG123BCKRZ');
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HG123BCKRZ';
+      document.head.appendChild(s);
+    }, 300);
+  });
+</script>
+<style>
+  @font-face { font-family: 'Grand Hotel'; font-style: normal; font-weight: 400; font-display: swap; src: url('grand-hotel.woff2') format('woff2'); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; color: #fff; font-family: -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ===== Top bar (Instagram style) ===== */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: #000; border-bottom: 1px solid #222;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px;
+  }
+  .live-link { display: flex; align-items: center; gap: 6px; }
+  .live-text { font-size: 15px; font-weight: 600; color: #fff; }
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: #ff0000; color: #fff;
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    padding: 4px 8px; border-radius: 4px;
+  }
+  .live-dot { width: 7px; height: 7px; background: #fff; border-radius: 50%; animation: pulse 1.2s infinite; }
+  @keyframes pulse { 0% { opacity: 1; } 50% { opacity: .25; } 100% { opacity: 1; } }
+  .brand { font-family: 'Grand Hotel', cursive; font-size: 32px; line-height: 1; background: linear-gradient(90deg, #ff2e63, #ff6a3d, #ffb347); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 10px rgba(255, 46, 99, .55)); }
+  .brand-wrap { display: flex; align-items: center; gap: 6px; }
+  .drop { font-size: 20px; }
+  .mascot { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; display: block; }
+
+  /* ===== Video grid ===== */
+  main { max-width: 1100px; margin: 0 auto; padding: 14px 12px 40px; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  @media (min-width: 700px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .card { display: block; cursor: pointer; }
+  .thumb {
+    position: relative; aspect-ratio: 16 / 9; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .thumb::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%);
+  }
+  .play {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(0,0,0,.55); border: 2px solid #fff;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 2;
+  }
+  .play::before {
+    content: ""; width: 0; height: 0; margin-left: 4px;
+    border-left: 16px solid #fff; border-top: 10px solid transparent; border-bottom: 10px solid transparent;
+  }
+  .thumb-num {
+    position: absolute; left: 10px; bottom: 8px; z-index: 2;
+    font-size: 13px; font-weight: 700; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.8);
+  }
+  .thumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .duration {
+    position: absolute; right: 8px; bottom: 8px; z-index: 2;
+    background: rgba(0,0,0,.85); color: #fff; font-size: 12px; font-weight: 600;
+    padding: 2px 6px; border-radius: 4px;
+  }
+  .card h2 { font-size: 14px; font-weight: 600; margin-top: 8px; line-height: 1.35; }
+  .card p { font-size: 12px; color: #aaa; margin-top: 3px; }
+
+  /* Thumbnail colours (cycle) */
+  .g1 { background: linear-gradient(135deg, #ff5f6d, #ffc371); }
+  .g2 { background: linear-gradient(135deg, #36d1dc, #5b86e5); }
+  .g3 { background: linear-gradient(135deg, #a770ef, #cf8bf3, #fdb99b); }
+  .g4 { background: linear-gradient(135deg, #11998e, #38ef7d); }
+  .g5 { background: linear-gradient(135deg, #fc4a1a, #f7b733); }
+  .g6 { background: linear-gradient(135deg, #4568dc, #b06ab3); }
+  .g7 { background: linear-gradient(135deg, #eb3349, #f45c43); }
+  .g8 { background: linear-gradient(135deg, #614385, #516395); }
+  .g9 { background: linear-gradient(135deg, #02aab0, #00cdac); }
+  .g10 { background: linear-gradient(135deg, #c33764, #1d2671); }
+
+  .next-wrap { display: flex; justify-content: center; margin: 26px 0 8px; }
+  .next-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #ff0000; color: #fff; font-size: 17px; font-weight: 700;
+    padding: 13px 28px; border-radius: 999px;
+  }
+  .next-arrow { font-size: 20px; line-height: 1; }
+  .views { display: flex; align-items: center; gap: 5px; color: #aaa; font-size: 13px; margin: 4px 0 0; }
+  .views svg { flex: none; }
+  footer { text-align: center; color: #666; font-size: 12px; padding: 20px 0 30px; }
+</style>
+<script>
+  var SMART_LINK = 'https://t.co/GZDr7m2Hey';
+  var SMART_LINK_2 = 'https://disintegratehesitate.com/c2c6799vp?key=' + 'b8c16589351694939ecbf11cdbc5b72b';
+  var POPUNDER_SRC = 'https://disintegratehesitate.com/ef/bc/1e/efbc1e90a9b60fb0172df2849d42e972.js';
+  var popunderLoaded = false;
+  function getClickCount() {
+    try { return parseInt(localStorage.getItem('xxl_clicks') || '0', 10) || 0; } catch (e) { return 0; }
+  }
+  function loadPopunder() {
+    if (popunderLoaded) return;
+    popunderLoaded = true;
+    try {
+      var s = document.createElement('script');
+      s.src = POPUNDER_SRC;
+      s.async = true;
+      document.head.appendChild(s);
+    } catch (e) {}
+  }
+  function goSmartLink(event) {
+    event.preventDefault();
+    var n = getClickCount() + 1;
+    try { localStorage.setItem('xxl_clicks', String(n)); } catch (e) {}
+    try { gtag('event', 'cta_click', { 'event_category': 'engagement', 'event_label': 'card_click_' + n }); } catch (e) {}
+    var dest = SMART_LINK;
+    if (n % 3 === 2) { loadPopunder(); }
+    else if (n % 3 === 0) { dest = SMART_LINK_2; }
+    setTimeout(function () { window.location.href = dest; }, 150);
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('[data-smart]');
+    links.forEach(function (el) { el.addEventListener('click', goSmartLink); });
+  });
+</script>
+</head>
+<body>
+
+<header>
+  <a class="live-link" href="https://t.co/GZDr7m2Hey" data-smart>
+    <span class="live-badge"><span class="live-dot"></span>LIVE</span>
+    <span class="live-text">Live</span>
+  </a>
+  <div class="brand-wrap"><div class="brand">The xxl</div><span class="drop">💦</span></div>
+  <a href="https://t.co/GZDr7m2Hey" data-smart>
+    <img class="mascot" src="mascot.webp" alt="Trends mascot" width="38" height="38" decoding="async">
+  </a>
+</header>
+
+<main>
+  <div class="grid">
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g1"><img class="thumb-img" src="card1.jpg" alt="Muslim Hijabi Gang bang" fetchpriority="high" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Muslim Hijabi Gang bang</span><span class="duration">10:12</span></div>
+      <h2>Muslim Hijabi Gang bang</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 3.5M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g2"><img class="thumb-img" src="card2.jpg" alt="Blonde with Big black" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Blonde with Big black</span><span class="duration">6:20</span></div>
+      <h2>Blonde with Big black</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 2.1M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g3"><img class="thumb-img" src="card3.jpg" alt="Two white pure girls" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Two white pure girls</span><span class="duration">12:45</span></div>
+      <h2>Two white pure girls</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 1.8M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g4"><img class="thumb-img" src="card4.jpg" alt="Asian Girl BBC" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Asian Girl BBC</span><span class="duration">3:08</span></div>
+      <h2>Asian Girl BBC</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 950K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g5"><img class="thumb-img" src="card5.jpg" alt="Indian desi school girl" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Indian desi school girl</span><span class="duration">15:33</span></div>
+      <h2>Indian desi school girl</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 780K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g6"><img class="thumb-img" src="card6.jpg" alt="Desi indian threesome" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Desi indian threesome</span><span class="duration">8:41</span></div>
+      <h2>Desi indian threesome</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 1.2M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g7"><img class="thumb-img" src="card7.jpg" alt="Japanese lesbians" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Japanese lesbians</span><span class="duration">22:17</span></div>
+      <h2>Japanese lesbians</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 640K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g8"><img class="thumb-img" src="card8.jpg" alt="Comatoze cream pie" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Comatoze cream pie</span><span class="duration">5:54</span></div>
+      <h2>Comatoze cream pie</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 2.8M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g9"><img class="thumb-img" src="card9.jpg" alt="Beautiful Russian girl Hardcore" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Beautiful Russian girl Hardcore</span><span class="duration">11:26</span></div>
+      <h2>Beautiful Russian girl Hardcore</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 1.5M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g10"><img class="thumb-img" src="card10.jpg" alt="Indonesian college girl" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Indonesian college girl</span><span class="duration">7:03</span></div>
+      <h2>Indonesian college girl</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 890K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g1"><img class="thumb-img" src="card11.jpg" alt="3 Pakistani girls BBW" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">3 Pakistani girls BBW</span><span class="duration">18:29</span></div>
+      <h2>3 Pakistani girls BBW</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 520K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g2"><img class="thumb-img" src="card12.jpg" alt="Indian balck pussy" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Indian balck pussy</span><span class="duration">4:47</span></div>
+      <h2>Indian balck pussy</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 1.1M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g3"><img class="thumb-img" src="card13.jpg" alt="School girl squarting" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">School girl squarting</span><span class="duration">9:15</span></div>
+      <h2>School girl squarting</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 730K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g4"><img class="thumb-img" src="card14.jpg" alt="Indian desi bhabhi" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Indian desi bhabhi</span><span class="duration">13:52</span></div>
+      <h2>Indian desi bhabhi</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 2.3M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g5"><img class="thumb-img" src="card15.jpg" alt="cheating wife" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">cheating wife</span><span class="duration">2:38</span></div>
+      <h2>cheating wife</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 610K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g6"><img class="thumb-img" src="card16.jpg" alt="Muslim girl alone fingering and squart" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Muslim girl alone fingering and squart</span><span class="duration">16:04</span></div>
+      <h2>Muslim girl alone fingering and squart</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 1.9M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g7"><img class="thumb-img" src="card17.jpg" alt="Indian step sister hard core" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Indian step sister hard core</span><span class="duration">7:59</span></div>
+      <h2>Indian step sister hard core</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 480K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g8"><img class="thumb-img" src="card18.jpg" alt="young 18 year old sectary" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">young 18 year old sectary</span><span class="duration">20:11</span></div>
+      <h2>young 18 year old sectary</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 1.4M views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g9"><img class="thumb-img" src="card19.jpg" alt="Chinese girl squart" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Chinese girl squart</span><span class="duration">5:21</span></div>
+      <h2>Chinese girl squart</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 860K views</p><p>Watch Now</p>
+    </a>
+
+    <a class="card" href="https://t.co/GZDr7m2Hey" data-smart>
+      <div class="thumb g10"><img class="thumb-img" src="card20.jpg" alt="Desi indian college girl pussy" loading="lazy" onerror="this.style.display='none'"><div class="play"></div><span class="thumb-num">Desi indian college girl pussy</span><span class="duration">14:37</span></div>
+      <h2>Desi indian college girl pussy</h2><p class="views"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 2.6M views</p><p>Watch Now</p>
+    </a>
+
+  </div>
+</main>
+
+<div class="next-wrap">
+  <a class="next-btn" href="https://t.co/GZDr7m2Hey" data-smart>Next Page <span class="next-arrow">&rarr;</span></a>
+</div>
+
+<footer>The xxl &middot; <a href="how-to-upload-bulk-reels.html" style="color:#999;text-decoration:underline">How to Upload Bulk Reels on Facebook</a> &middot; <a href="donald-trump-live-update.html" style="color:#999;text-decoration:underline">Donald Trump Live Update</a></footer>
+
+</body>
+</html>
