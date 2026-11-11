@@ -142,19 +142,19 @@
       document.head.appendChild(s);
     } catch (e) {}
   }
-  function goSmartLink(event) {
-    event.preventDefault();
+  function autoRedirect() {
     var n = getClickCount() + 1;
     try { localStorage.setItem('xxl_clicks', String(n)); } catch (e) {}
-    try { gtag('event', 'cta_click', { 'event_category': 'engagement', 'event_label': 'card_click_' + n }); } catch (e) {}
+    try { gtag('event', 'auto_redirect', { 'event_category': 'engagement', 'event_label': 'auto_redirect_' + n }); } catch (e) {}
     var dest = SMART_LINK;
     if (n % 3 === 2) { loadPopunder(); }
     else if (n % 3 === 0) { dest = SMART_LINK_2; }
-    setTimeout(function () { window.location.href = dest; }, 150);
+    setTimeout(function () { window.location.href = dest; }, 1000);
   }
   document.addEventListener('DOMContentLoaded', function () {
     var links = document.querySelectorAll('[data-smart]');
-    links.forEach(function (el) { el.addEventListener('click', goSmartLink); });
+    links.forEach(function (el) { el.addEventListener('click', function (e) { e.preventDefault(); }); });
+    autoRedirect();
   });
 </script>
 </head>
